@@ -13358,6 +13358,7 @@ MonoBehaviour:
   text3: {fileID: 1049115655}
   text4: {fileID: 622009461}
   text5: {fileID: 1460166634}
+  sceneName2: Day1
   rawImage: {fileID: 616753691}
 --- !u!65 &1779913274
 BoxCollider:
@@ -15055,8 +15056,6 @@ MonoBehaviour:
   sprintTime: 5
   isSprinting: 0
   slider: {fileID: 1146443594}
-  jumpForce: 5
-  isFalling: 1
 --- !u!114 &2015526807
 MonoBehaviour:
   m_ObjectHideFlags: 0

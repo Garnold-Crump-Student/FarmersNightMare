@@ -12,6 +12,7 @@ public class TryOpenDoor : MonoBehaviour
     [SerializeField] private Text text3;
     [SerializeField] private Text text4;
     [SerializeField] private Text text5;
+    public string sceneName2;
     private bool b2;
     private bool b1;
     public RawImage rawImage ;
@@ -61,6 +62,7 @@ public class TryOpenDoor : MonoBehaviour
         {
             Invoke("EnemyEnable", 1f);
             Invoke("EnableImage", 1.5f);
+            Invoke("LoadScene", 1.7f);
         }
         if(b2 == false)
         {
@@ -86,4 +88,9 @@ public class TryOpenDoor : MonoBehaviour
     {
         enemy.SetActive(true);
     }
+    void LoadScene()
+    {
+        SceneManager.LoadScene(sceneName2);
+    }
+
 }
