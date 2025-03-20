@@ -6,8 +6,6 @@ public class PlayerInteractions : MonoBehaviour
 {
     [SerializeField] private float maxDistance = 2f;
     [SerializeField] private Text interactableName;
-    public float jumpForce = 5f;
-    public bool isFalling = true;
     private InteractionObject targetInteraction;
 
 

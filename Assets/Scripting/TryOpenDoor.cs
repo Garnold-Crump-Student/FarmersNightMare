@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TryOpenDoor : MonoBehaviour
 { public GameObject player;
+    public GameObject enemy;
     float maxDistance = 2f;
     [SerializeField] private string scene;
     [SerializeField] private Text text3;
@@ -33,7 +34,7 @@ public class TryOpenDoor : MonoBehaviour
                if(Input.GetKey(KeyCode.E)) {
                     text3.text = locked;
                     Invoke("DisableText3", 1f);
-                    Invoke("Behind", 1f);
+                    Invoke("Behind", 0.5f);
                     Invoke("DisableText4", 2f);
                     
 
@@ -58,7 +59,8 @@ public class TryOpenDoor : MonoBehaviour
         
         if (b1 == false)
         {
-            Invoke("EnableImage", 1f);
+            Invoke("EnemyEnable", 1f);
+            Invoke("EnableImage", 1.5f);
         }
         if(b2 == false)
         {
@@ -72,11 +74,16 @@ public class TryOpenDoor : MonoBehaviour
     }
     void EnableImage()
     {
+       
         rawImage.enabled = true; 
+       
     }
     void LoadScene2()
     {
         Debug.Log("Didnt wprl");
     }
-    
+    void EnemyEnable()
+    {
+        enemy.SetActive(true);
+    }
 }
