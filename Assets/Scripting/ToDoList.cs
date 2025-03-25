@@ -12,8 +12,13 @@ public class ToDoList : MonoBehaviour
     public Text ToDo;
     public Image ListGraphics;
     public MeshRenderer ListRenderer;
-  [SerializeField]  private bool ListPickedUp;
-   [SerializeField] private bool DisableText;
+    public Image button;
+  private bool ListPickedUp;
+    private bool DisableText;
+     private bool EnableCursor;
+    public Text obj1;
+    public Text obj2;
+    public Text obj3;
     void Start()
     {
         
@@ -53,9 +58,14 @@ public class ToDoList : MonoBehaviour
                 DisableText = true;
                
                 ToDo.enabled = true;
-               
-              
 
+                button.enabled = true;
+                obj1.enabled = true;
+                obj2.enabled = true;
+                obj3.enabled = true;
+                Cursor.lockState = CursorLockMode.None;
+               
+                
             }
         }
       
@@ -66,6 +76,10 @@ public class ToDoList : MonoBehaviour
         {
             ListGraphics.enabled = false;
             ToDo.enabled = false;
+            button.enabled = false;
+            obj1.enabled = false;
+            obj2.enabled = false;
+            obj3.enabled = false;
         }
     }
 }
