@@ -16,9 +16,6 @@ public class Exit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        image.enabled = false;
-        text.enabled = false;
-        button.enabled = false;
     }
 
     // Update is called once per frame
