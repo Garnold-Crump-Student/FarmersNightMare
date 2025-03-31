@@ -12,6 +12,10 @@ public class Exit : MonoBehaviour
     public Text obj1;
     public Text obj2;
     public Text obj3;
+    public Text obj5;
+    public Image i1;
+    public Image i2;
+    public Image i3;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,10 @@ public class Exit : MonoBehaviour
         obj1.enabled = false;
         obj2.enabled = false;
         obj3.enabled = false;
+        obj5.enabled = false;
+        i1.enabled = false;
+        i2.enabled = false;
+        i3.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
   
