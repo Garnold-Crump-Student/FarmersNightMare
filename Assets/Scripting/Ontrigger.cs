@@ -5,8 +5,11 @@ public class Ontrigger : MonoBehaviour
 {
     public Image check1;
     public Image img;
+    public Image check2;
     private bool exit;
     public Image line;
+    public Image line2;
+    public SellCorn sellCorn;
  
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,22 @@ public class Ontrigger : MonoBehaviour
             {
                 check1.enabled = false;
                 line.enabled = false;
+            }
+        }
+        if (sellCorn.money >= 1)
+        {
+            if (exit == true)
+            {
+                if (img.enabled == true)
+                {
+                    check2.enabled = true;
+                    line2.enabled = true;
+                }
+                if (img.enabled == false)
+                {
+                    check2.enabled = false;
+                    line2.enabled = false;
+                }
             }
         }
 }

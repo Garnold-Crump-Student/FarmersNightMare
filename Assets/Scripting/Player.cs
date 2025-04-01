@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
         slider.value = sprintTime;
         moveDirection.Normalize();
-        moveDirection.y = -1f;
+        if (controller.isGrounded) { moveDirection.y = 1f; }
 
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
 
