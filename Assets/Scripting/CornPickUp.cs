@@ -8,10 +8,12 @@ public class CornPickUp : MonoBehaviour
     public GameObject player;
     public GameObject corn;
     public Text text;
+
   
     public Vector3 destinationPosition;
-    float maxDistance = 1f;
+    float maxDistance = 2f;
     public int cornAmount;
+    private bool ff;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,11 @@ public class CornPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
         if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
         {
+            ff = true;
+
             text.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -31,5 +36,13 @@ public class CornPickUp : MonoBehaviour
                 text.enabled = false;
             }
         }
+        if (ff == true)
+        {
+            if (Vector3.Distance(transform.position, player.transform.position) > maxDistance)
+            {
+                text.enabled = false;
+            }
+        }
+
     }
 }

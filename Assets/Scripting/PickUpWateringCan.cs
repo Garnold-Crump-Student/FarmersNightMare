@@ -12,6 +12,10 @@ public class PickUpWateringCan : MonoBehaviour
     public Text text;
     private bool Pickup;
     private Rigidbody rb;
+    public Transform head;
+    public Transform rightHand;
+    public float handOffsetY;
+    public float handOffsetZ = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,10 @@ public class PickUpWateringCan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(transform.position, player.transform.position) >= maxDistance)
+        {
+            text.enabled = false;
+        }
         if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
         {
           
@@ -34,7 +42,17 @@ public class PickUpWateringCan : MonoBehaviour
              PickUpObject.GetComponent<Rigidbody>().isKinematic = true;
                 PickUpObject.transform.position = Hands.transform.position;
                 PickUpObject.transform.parent = Hands.transform;
-              
+                PickUpObject.transform.eulerAngles = Hands.transform.eulerAngles;
+                Quaternion headRotation = head.transform.rotation;
+
+
+
+                rightHand.rotation = headRotation;
+
+
+
+                rightHand.position = head.position + headRotation * new Vector3(0.1f, handOffsetY, handOffsetZ);
+
 
 
             }
@@ -50,6 +68,7 @@ public class PickUpWateringCan : MonoBehaviour
                     Pickup = false;
                    
                 }
+               
             }
         }
     }
