@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,18 +9,21 @@ public class PickUpWateringCan : MonoBehaviour
     public GameObject Hands;
     public float maxDistance = 4;
     public Text text;
-    private bool Pickup;
+    public bool Pickup;
     private Rigidbody rb;
+    public ParticleSystem particle;
     // Start is called before the first frame update
     void Start()
     {
-
+        particle.Stop();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
+        if (Vector3.Distance(transform.position, player.transform.position) >= maxDistance)
+        { text.enabled = false; }
+            if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
         {
           
             text.enabled = true;
@@ -50,6 +52,8 @@ public class PickUpWateringCan : MonoBehaviour
                     Pickup = false;
                    
                 }
+                if (Input.GetMouseButtonDown(0)) { particle.Play(); }
+                if (Input.GetMouseButtonUp(0)) { particle.Stop(); }
             }
         }
     }
