@@ -21,7 +21,11 @@ public class CornPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
+        if (Vector3.Distance(transform.position, player.transform.position) >= maxDistance)
+        {
+            text.enabled = false;
+        }
+            if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
         {
             text.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
