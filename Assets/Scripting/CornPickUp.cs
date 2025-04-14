@@ -25,6 +25,13 @@ public class CornPickUp : MonoBehaviour
     {
       
         if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
+
+        if (Vector3.Distance(transform.position, player.transform.position) >= maxDistance)
+        {
+            text.enabled = false;
+        }
+            if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
+
         {
             ff = true;
 
