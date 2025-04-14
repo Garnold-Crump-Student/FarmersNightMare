@@ -10,6 +10,7 @@ public class Ontrigger : MonoBehaviour
     public Image line;
     public Image line2;
     public SellCorn sellCorn;
+    public bool complete1;
  
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,12 @@ public class Ontrigger : MonoBehaviour
     {
         if (exit == true)
         {
+            complete1 = true;
             if (img.enabled == true)
             {
                 check1.enabled = true;
                 line.enabled = true;
+
             }
             if (img.enabled == false)
             {

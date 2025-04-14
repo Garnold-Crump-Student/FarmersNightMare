@@ -14,7 +14,7 @@ public class Sun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(Vector3.zero, Vector3.right,0.2f*Time.deltaTime);
+        transform.RotateAround(Vector3.zero, Vector3.right,0.8f*Time.deltaTime);
         transform.LookAt(Vector3.zero);
 
         

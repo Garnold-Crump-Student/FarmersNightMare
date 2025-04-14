@@ -19,6 +19,7 @@ public class SellCorn : MonoBehaviour
     public Text moneyAmount1;
     public Text moneyAmount2;
     public Text moneyAmount3;
+    public bool complete2;
 
   
 
@@ -54,8 +55,10 @@ public class SellCorn : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ontrigger = true;
+
         if (corn > 0)
         {
+            complete2 = true;
             for (int i = 0; i <= corn -1; i++)
             {
                 money += 2;

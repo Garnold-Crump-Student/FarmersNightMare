@@ -8,6 +8,7 @@ public class WaterdPlants : MonoBehaviour
     public ParticleSystem particle;
     public ParticleSystem waterdPlants;
     public bool waterd;
+    public bool particlePlay;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class WaterdPlants : MonoBehaviour
                 {
                     waterd = true;
                     waterdPlants.Play();
+                    particlePlay = true;
                 }
             }
 

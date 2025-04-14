@@ -18,6 +18,7 @@ public class PickUpWateringCan : MonoBehaviour
     public float handOffsetZ = 0.3f;
 
     public ParticleSystem particle;
+  
 
     // Start is called before the first frame update
     void Start()

@@ -1,8 +1,14 @@
 <!-- UNITY CODE ASSIST INSTRUCTIONS START -->
 - Project name: FarmersNightMare
 - Unity version: Unity 2023.1.7f1
+- Active scene:
+  - Name: Day1
+  - Tags:
+    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground
+  - Layers:
+    - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: 10439_Corn_Field_v1_SG (205)
-  - Tag: Untagged
+  - Name: Terrain
+  - Tag: Ground
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
