@@ -8,7 +8,7 @@
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: Terrain
-  - Tag: Ground
-  - Layer: Default
+  - Name: Button (Legacy)
+  - Tag: Untagged
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
