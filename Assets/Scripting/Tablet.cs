@@ -20,6 +20,7 @@ public class Tablet : MonoBehaviour
     public RawImage tablet;
     public Image market;
     public Text marketPlace;
+    
 
 
 

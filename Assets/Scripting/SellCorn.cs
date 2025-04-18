@@ -19,13 +19,16 @@ public class SellCorn : MonoBehaviour
     public Text moneyAmount1;
     public Text moneyAmount2;
     public Text moneyAmount3;
+    public Text moneyAmount4;
     public bool complete2;
 
   
 
     // Update is called once per frame
     void Update()
+        
     {
+        moneyAmount4.text = moneyAmount.text;
         moneyAmount.text = money.ToString(); 
         moneyAmount1.text = money.ToString();
         moneyAmount2.text = money.ToString();

@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
     public float moveSpeed = 5f;
     public float sprintSpeed = 8f;
     private Vector3 moveDirection;
-    [SerializeField] private float sprintTime = 5f;
+   public float sprintTime = 5f;
     private float minSprint = 0.8f;
     public bool isSprinting;
+
     public Slider slider;
+    public PurhcaseButton purchaseButton;
 
 
     void Start()
@@ -23,7 +25,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+       
         slider.value = sprintTime;
         moveDirection.Normalize();
         moveDirection.y = -1f;
@@ -48,8 +50,11 @@ public class Player : MonoBehaviour
             sprintTime = 0;
             moveSpeed = 3;
         }
-        if(sprintTime >= 5) { sprintTime = 5;
+        if (purchaseButton.Sold == false && purchaseButton.sold2 == false && purchaseButton.sold3 == false) { if (sprintTime >= 5) { sprintTime = 5; } 
         }
+        if(purchaseButton.Sold == true) {  if (sprintTime >= 7) { sprintTime = 7; } }
+        if(purchaseButton.sold2 == true) {if(sprintTime >= 9) {  sprintTime = 9; } }
+        if(purchaseButton.sold3 == true) { if(sprintTime >= 10) {  sprintTime = 10; } }
         if (Input.GetKey(KeyCode.LeftShift))
         {
             sprintTime -= minSprint * Time.deltaTime;
