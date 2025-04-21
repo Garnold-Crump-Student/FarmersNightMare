@@ -26,6 +26,7 @@ public class PurhcaseButton : MonoBehaviour
     public bool click;
     public bool click2;
     public bool click3;
+    public float fix;
     void Start()
     {
         
@@ -34,14 +35,15 @@ public class PurhcaseButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(click == false && click2 == false && click3 == false) { fix = 5; }
        if (click == true) { buttons.enabled = false; button.enabled = false;
-            buttontext.enabled = false;
+            buttontext.enabled = false; fix = 7;
         }
        if(click2 == true) { DifferentButton.enabled = false; buttontext2.enabled = false;
-            button2.enabled = false;
+            button2.enabled = false; fix = 9;
         }
        if (click3 == true) { differentButton2.enabled = false; buttonimg.enabled = false;
-            buttonimgtext.enabled = false;
+            buttonimgtext.enabled = false; fix = 10;
         }
     }
     public void Click()
@@ -60,7 +62,7 @@ public class PurhcaseButton : MonoBehaviour
             
            click=true;
 
-              
+          
             
         }
        

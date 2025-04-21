@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
    public float sprintTime = 5f;
     private float minSprint = 0.8f;
     public bool isSprinting;
-
+    public float sprintTime1;
     public Slider slider;
     public PurhcaseButton purchaseButton;
 
@@ -25,8 +25,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        sprintTime1 = sprintTime;
         slider.value = sprintTime;
+        slider.maxValue = purchaseButton.fix;
         moveDirection.Normalize();
         moveDirection.y = -1f;
 
