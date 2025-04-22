@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Day2.unity
     guid: f0b5934966301a34c91797c6c338eff5
+  - enabled: 1
+    path: Assets/Scenes/NightMare.unity
+    guid: 911fb7d3d4885a1459313be01011cc27
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

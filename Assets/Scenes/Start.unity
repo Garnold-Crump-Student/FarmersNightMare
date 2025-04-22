@@ -3140,6 +3140,71 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.04867906, z: 0.13888887}
   m_Center: {x: 0, y: 0.01135095, z: -0.0388583}
+--- !u!1 &505074980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505074981}
+  - component: {fileID: 505074982}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &505074981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505074980}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 652.01624, y: 182.29175, z: -1.9807214}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &505074982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505074980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2cc5a5edc5e4a44f8013e491a3f1165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sellCorn: {fileID: 0}
+  Sold: 0
+  sold2: 0
+  player: {fileID: 2015526806}
+  Stamv1: 7
+  button: {fileID: 0}
+  buttontext: {fileID: 0}
+  button2: {fileID: 0}
+  buttontext2: {fileID: 0}
+  buttons: {fileID: 0}
+  buttons2: {fileID: 0}
+  DifferentButton: {fileID: 0}
+  sold3: 0
+  button3: {fileID: 0}
+  buttonimg: {fileID: 0}
+  buttonimgtext: {fileID: 0}
+  differentButton2: {fileID: 0}
+  click: 0
+  click2: 0
+  click3: 0
+  fix: 0
 --- !u!1001 &508538265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15055,7 +15120,9 @@ MonoBehaviour:
   sprintSpeed: 8
   sprintTime: 5
   isSprinting: 0
+  sprintTime1: 0
   slider: {fileID: 1146443594}
+  purchaseButton: {fileID: 505074982}
 --- !u!114 &2015526807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16043,3 +16110,4 @@ SceneRoots:
   - {fileID: 1666789367}
   - {fileID: 795269493}
   - {fileID: 666418229}
+  - {fileID: 505074981}

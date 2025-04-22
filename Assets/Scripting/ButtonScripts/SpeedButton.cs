@@ -19,6 +19,14 @@ public class SpeedButton : MonoBehaviour
     public Button button2;
     public Image box;
     public Image stick;
+    public Image purchase1;
+    public Image purchase2;
+    public Text textpurchase1;
+    public Text textpurchase2;
+    public Button puchases1;
+    public Button puchases2;
+    public PurhcaseButton purchaseButton;
+    public StamButton stamButton;
     void Start()
     {
         
@@ -27,6 +35,18 @@ public class SpeedButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(stamButton.clicked == true)
+        {
+            SpeedUpgrades.enabled = false;
+            Purchase.enabled = false;
+            buttonPurchase.enabled = false;
+            purchase.enabled = false;
+            SpeedText.enabled = false;
+            SpeedDescripton.enabled = false;
+
+            box.enabled = false;
+            stick.enabled = false;
+        }
         if (marketButton.enabled == false)
         {
             SpeedDescripton.enabled = false;
@@ -40,11 +60,18 @@ public class SpeedButton : MonoBehaviour
             buttontxt.enabled = false;
             box.enabled = false;
             stick.enabled = false;
+            purchase1.enabled = false;
+            purchase2.enabled = false;
+            textpurchase1.enabled = false; textpurchase2.enabled = false;
+            puchases1.enabled = false;
+            puchases2.enabled = false;
+            
         }
         if(marketButton.enabled == true)
         {
             button.enabled = true;
             button2.enabled = true;  buttontxt.enabled = true;
+
           
         }
     }
@@ -56,8 +83,13 @@ public class SpeedButton : MonoBehaviour
         purchase.enabled = true;
         SpeedText.enabled = true;
         SpeedDescripton.enabled = true;
-      
+       
         box.enabled = true;
         stick.enabled = true;
+        if (purchaseButton.click == false && purchaseButton.click2 == false && purchaseButton.click3 == false) { purchase1.enabled = true;
+            purchase2.enabled = true;
+            textpurchase1.enabled = true; textpurchase2.enabled = true;
+            puchases1.enabled = true;
+            puchases2.enabled = true; }
     }
 }

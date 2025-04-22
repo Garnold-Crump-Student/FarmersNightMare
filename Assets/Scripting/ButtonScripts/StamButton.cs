@@ -15,6 +15,7 @@ public class StamButton : MonoBehaviour
     public Text StickText;
     public Text StickDescripton;
     public RawImage marketButton;
+    public bool clicked;
     void Start()
     {
         
@@ -45,6 +46,11 @@ public class StamButton : MonoBehaviour
         purchase.enabled = true;
         StickText.enabled = true;
         StickDescripton.enabled = true;
+        clicked = true;
+        Invoke("False", 0f);
+        
         
     }
+    void False(){clicked = false;}
+
 }
