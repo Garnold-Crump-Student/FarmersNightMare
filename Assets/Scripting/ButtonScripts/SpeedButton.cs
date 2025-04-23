@@ -27,6 +27,7 @@ public class SpeedButton : MonoBehaviour
     public Button puchases2;
     public PurhcaseButton purchaseButton;
     public StamButton stamButton;
+
     void Start()
     {
         
@@ -35,6 +36,12 @@ public class SpeedButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(purchaseButton.click3 == true)
+        {
+            puchases2.enabled = false;
+            purchase2.enabled = false;
+
+        }
         if(stamButton.clicked == true)
         {
             SpeedUpgrades.enabled = false;
@@ -90,6 +97,9 @@ public class SpeedButton : MonoBehaviour
             purchase2.enabled = true;
             textpurchase1.enabled = true; textpurchase2.enabled = true;
             puchases1.enabled = true;
-            puchases2.enabled = true; }
+            puchases2.enabled = true;
+            purchase.enabled = true;
+        }
+        if (purchaseButton.click == true &&  purchaseButton.click2 == true && purchaseButton.click3 == true) {  purchase1.enabled = false;  purchase2.enabled = false;  purchase.enabled = true; }
     }
 }

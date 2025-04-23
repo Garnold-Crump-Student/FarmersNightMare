@@ -12,7 +12,7 @@ public class SellCorn : MonoBehaviour
     public GameObject corn1;
     public GameObject corn2;
     public GameObject corn3;
-    public double money;
+    public  double money;
     public int corn;
     public bool ontrigger;
     public Text moneyAmount;

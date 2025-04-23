@@ -44,6 +44,12 @@ public class PurchaseSpeed : MonoBehaviour
             DifferentButton.enabled = false; buttontext2.enabled = false;
             button2.enabled = false;
         }
+        if(click3 == true)
+        {
+            differentButton2.enabled = false;
+            buttonimg.enabled = false;
+            buttonimgtext.enabled = false;
+        }
     }
     public void Click()
     {
