@@ -14,10 +14,11 @@ public class CornPickUp : MonoBehaviour
     float maxDistance = 2f;
     public int cornAmount;
     private bool ff;
+  
     // Start is called before the first frame update
     void Start()
     {
-
+        DontDestroyOnLoad(corn);
     }
 
     // Update is called once per frame

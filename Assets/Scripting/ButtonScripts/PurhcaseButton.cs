@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class PurhcaseButton : MonoBehaviour
@@ -27,10 +28,13 @@ public class PurhcaseButton : MonoBehaviour
     public bool click2;
     public bool click3;
     public float fix;
+   
+    public bool CurrentSprintLength { get; set; }
     void Start()
     {
         
     }
+   
 
     // Update is called once per frame
     void Update()

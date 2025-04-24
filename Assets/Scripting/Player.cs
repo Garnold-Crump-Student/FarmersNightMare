@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
@@ -12,20 +15,27 @@ public class Player : MonoBehaviour
    public float sprintTime = 5f;
     private float minSprint = 0.8f;
     public bool isSprinting;
-    public float sprintTime1;
     public Slider slider;
     public PurhcaseButton purchaseButton;
+    public GameObject player;
+    public string SceneName;
+  
+   
 
 
+   
+      
+ 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        DontDestroyOnLoad(player);
     }
 
     // Update is called once per frame
     void Update()
     {
-        sprintTime1 = sprintTime;
+      if(Input.GetKeyUp(KeyCode.F)) { Invoke("LoadScene", 1); }
         slider.value = sprintTime;
         slider.maxValue = purchaseButton.fix;
         moveDirection.Normalize();
@@ -56,6 +66,7 @@ public class Player : MonoBehaviour
         if(purchaseButton.Sold == true) {  if (sprintTime >= 7) { sprintTime = 7; } }
         if(purchaseButton.sold2 == true) {if(sprintTime >= 9) {  sprintTime = 9; } }
         if(purchaseButton.sold3 == true) { if(sprintTime >= 10) {  sprintTime = 10; } }
+    
         if (Input.GetKey(KeyCode.LeftShift))
         {
             sprintTime -= minSprint * Time.deltaTime;
@@ -83,6 +94,9 @@ public class Player : MonoBehaviour
     {
         sprintTime += minSprint * Time.deltaTime;
     }
+    void LoadScene()
+    {
+        SceneManager.LoadScene(SceneName);
+    }
 
-   
 }

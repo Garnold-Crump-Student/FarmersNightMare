@@ -24,6 +24,7 @@ public class PickUpWateringCan : MonoBehaviour
     void Start()
     {
         particle.Stop();
+        DontDestroyOnLoad(PickUpObject);
     }
 
     // Update is called once per frame

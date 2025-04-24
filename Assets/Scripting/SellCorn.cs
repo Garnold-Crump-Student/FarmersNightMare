@@ -1,4 +1,5 @@
 
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,10 +22,15 @@ public class SellCorn : MonoBehaviour
     public Text moneyAmount3;
     public Text moneyAmount4;
     public bool complete2;
+    public GameObject sell;
+    
 
-  
 
     // Update is called once per frame
+    private void Start()
+    {
+        DontDestroyOnLoad(sell);
+    }
     void Update()
         
     {

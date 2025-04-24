@@ -12,10 +12,11 @@ public class Bed : MonoBehaviour
     public GameObject player;
     public Text bedtext;
     public string SceneName;
+    public GameObject bed;
     
     void Start()
     {
-        
+        DontDestroyOnLoad(bed);
     }
 
     // Update is called once per frame

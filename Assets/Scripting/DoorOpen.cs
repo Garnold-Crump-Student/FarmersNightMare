@@ -15,6 +15,12 @@ public class DoorOpen : MonoBehaviour
     public MeshRenderer wall2;
     private float maxDistance = 2f;
     public GameObject player;
+    public GameObject Door;
+     void Start()
+    {
+        DontDestroyOnLoad(Door);
+
+    }
     void Update()
     {
         if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance) {
