@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BedForNightmare : MonoBehaviour
 {
+    public DontDestroy dontDestroy;
     public GameObject player;
     public Text bedtext;
     public string SceneName;
@@ -38,9 +39,14 @@ public class BedForNightmare : MonoBehaviour
             eye1.enabled = true;
             eye2.enabled = true;
         }
+        
     }
     void LoadScene()
     {
         SceneManager.LoadScene(SceneName);
+
+        
     }
+
+   
 }

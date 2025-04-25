@@ -13,23 +13,22 @@ public class DontDestroy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       DontDestroyOnLoad(all);
+       
+       
+        
     }
 
     // Update is called once per frame
 
-     void Update()
+    void Update()
     {
-        if (bool.Parse(sceneToDestroyIn))
+        string current = SceneManager.GetActiveScene().name;
+        if (current == "NightMare")
         {
-
-            GameObject objectToDestroy = all;
-
-            if (objectToDestroy != null)
-            {
-                Destroy(objectToDestroy);
-            }
+            all.SetActive(false);
         }
+        if(current == "Day2") { all.SetActive(true); }
+        if (current != sceneToDestroyIn) { DontDestroyOnLoad(all); }
     }
  
 }
