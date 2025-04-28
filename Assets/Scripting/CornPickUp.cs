@@ -13,6 +13,7 @@ public class CornPickUp : MonoBehaviour
     public Vector3 destinationPosition;
     float maxDistance = 2f;
     public int cornAmount;
+    public int finalCorn;
     private bool ff;
   
     // Start is called before the first frame update
@@ -41,6 +42,7 @@ public class CornPickUp : MonoBehaviour
             {
                 corn.SetActive(false);
                 cornAmount += 1;
+                finalCorn += cornAmount;
                 text.enabled = false;
             }
         }

@@ -1,5 +1,6 @@
 
 using JetBrains.Annotations;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ public class SellCorn : MonoBehaviour
     public Text moneyAmount4;
     public bool complete2;
     public GameObject sell;
+
+    
     
 
 
@@ -44,14 +47,16 @@ public class SellCorn : MonoBehaviour
         corn += cornPickUp1.cornAmount;
         corn += cornPickUp2.cornAmount;
         corn += cornPickUp3.cornAmount;
+        
 
-        if(ontrigger == true)
+        if (ontrigger == true)
         {
             corn = 0;
             cornPickUp.cornAmount = 0;
             cornPickUp1.cornAmount = 0;
             cornPickUp2.cornAmount = 0;
             cornPickUp3.cornAmount = 0;
+            cornPickUp.cornAmount = 0;
            
         }
         if(ontrigger == true && corn == 0)

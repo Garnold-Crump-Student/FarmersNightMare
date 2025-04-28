@@ -11,44 +11,69 @@ public class WaterdPlants : MonoBehaviour
     public bool waterd;
     public bool particlePlay;
     public Vector3 targetPosition;
+    public float x;
+    public float y;
+    public float z;
+    public bool grown;
+    public double day2a = .5;
+    public double time;
+ 
 
     // Start is called before the first frame update
     void Start()
     {
-      
+
         waterdPlants.Stop();
-       
-      
+
+
 
     }
-   
+
+
 
     // Update is called once per frame
     void Update()
-    {
-        string currnet = SceneManager.GetActiveScene().name;
+    {   string currnet = SceneManager.GetActiveScene().name;
+
         if (currnet == "Day2")
         {
-            if (waterd == true)
+            time += day2a * Time.deltaTime;
+            if (time < 1)
             {
-                this.transform.position = targetPosition;
-                Debug.Log("Waterd");
-            }
-        }
-        if (waterd == false ) { waterdPlants.Stop(); }
-        if (pickUpWateringCan.Pickup == true)
-        {
-            if (Vector3.Distance(transform.position, particle.transform.position) <= 2)
-            {
-                if (Input.GetMouseButton(0))
+                if (waterd == true)
                 {
-                    waterd = true;
-                    waterdPlants.Play();
-                    particlePlay = true;
+                    this.transform.position = targetPosition;
+                    this.transform.localScale = new Vector3(x, y, z);
+                    Debug.Log("Waterd");
+                    grown = true;
                 }
             }
-
         }
         
+     
+       
+            if (waterd == false) { waterdPlants.Stop(); }
+            if (pickUpWateringCan.Pickup == true)
+            {
+                if (Vector3.Distance(transform.position, particle.transform.position) <= 2)
+                {
+                    if (Input.GetMouseButton(0))
+                    {
+                        waterd = true;
+                        waterdPlants.Play();
+                        particlePlay = true;
+                    }
+                }
+
+            }
+         
+
+
+        }
     }
-}
+
+        
+
+
+
+
