@@ -25,7 +25,7 @@ public class SetActive : MonoBehaviour
     void Update()
     {
        
-      
+     
         string current = SceneManager.GetActiveScene().name;
         if (current == "Day2")
         {
@@ -35,6 +35,7 @@ public class SetActive : MonoBehaviour
             setActive2.SetActive(true);
             setActive3.SetActive(true);
         }
+      
     }
    
 }

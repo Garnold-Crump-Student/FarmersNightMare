@@ -1,51 +1,46 @@
-
 using UnityEngine;
 
 public class FollowPath : MonoBehaviour
 {
-    public float speed = 20.0f;
+    public float speed = 5.0f;
     public float minDist = 1f;
     public Transform target;
     public NightmareLights nightmareLights;
+    public float rotationSpeed = 5f;
 
-    // Use this for initialization
     void Start()
     {
-        // if no target specified, assume the player
         if (target == null)
         {
-
-            if (GameObject.FindWithTag("Player") != null)
+            GameObject player = GameObject.FindWithTag("Hand");
+            if (player != null)
             {
-                target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+                target = player.transform;
             }
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (nightmareLights.enterd == true)
+        if (!nightmareLights || !nightmareLights.enterd || target == null)
+            return;
+
+        Vector3 direction = (target.position - transform.position).normalized;
+        direction.y = 0f; // Optional: prevent vertical tilting if on a flat plane
+
+        // Rotate smoothly toward the player
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, rotationSpeed * Time.deltaTime);
+
+        float distance = Vector3.Distance(transform.position, target.position);
+        if (distance > minDist)
         {
-            if (target == null)
-                return;
-
-            // face the target
-            transform.LookAt(target);
-
-            //get the distance between the chaser and the target
-            float distance = Vector3.Distance(transform.position, target.position);
-
-            //so long as the chaser is farther away than the minimum distance, move towards it at rate speed.
-            if (distance > minDist)
-                transform.position += transform.forward * speed * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
     }
 
-    // Set the target of the chaser
     public void SetTarget(Transform newTarget)
     {
         target = newTarget;
     }
-
 }

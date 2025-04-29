@@ -27,7 +27,7 @@ public class ToDoList : MonoBehaviour
     public GameObject note;
     void Start()
     {
-        DontDestroyOnLoad(note);    
+       
     }
 
     // Update is called once per frame

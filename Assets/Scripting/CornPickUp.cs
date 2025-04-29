@@ -8,6 +8,7 @@ public class CornPickUp : MonoBehaviour
     public GameObject player;
     public GameObject corn;
     public Text text;
+    public WaterdPlants waterdPlants;
 
   
     public Vector3 destinationPosition;
@@ -53,6 +54,8 @@ public class CornPickUp : MonoBehaviour
                 text.enabled = false;
             }
         }
+        if (waterdPlants.grown== true) {
+            this.gameObject.SetActive(true); }
 
     }
 }

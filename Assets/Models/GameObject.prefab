@@ -434,9 +434,10 @@ MonoBehaviour:
   sprintSpeed: 8
   sprintTime: 5
   isSprinting: 0
-  sprintTime1: 0
   slider: {fileID: 0}
   purchaseButton: {fileID: 0}
+  player: {fileID: 7008255183766589386}
+  SceneName: NightMare
 --- !u!114 &8861667377554781834
 MonoBehaviour:
   m_ObjectHideFlags: 0

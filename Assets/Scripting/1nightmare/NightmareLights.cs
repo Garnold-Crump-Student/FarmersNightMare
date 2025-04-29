@@ -14,15 +14,17 @@ public class NightmareLights : MonoBehaviour
     public float blinkInterval = 1f;
     public float blinkDuration = 0.5f;
     public bool enterd;
+     AudioSource enemyComing;
+    public AudioClip enemyisComing;
     void Start()
     {
-        
+        enemyComing = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enterd)
+        if (enterd )
         {
            
         }
@@ -38,6 +40,9 @@ public class NightmareLights : MonoBehaviour
             Run.enabled = true;
             run.enabled = true;
             if(run.enabled == true && Run.enabled == true ) { Invoke("RunDisable", 0.5f); }
+            enemyComing.clip = enemyisComing;
+           
+            enemyComing.Play();
         }
     }
 

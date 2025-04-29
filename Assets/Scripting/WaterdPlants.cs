@@ -46,6 +46,7 @@ public class WaterdPlants : MonoBehaviour
                     this.transform.localScale = new Vector3(x, y, z);
                     Debug.Log("Waterd");
                     grown = true;
+                    waterd = false;
                 }
             }
         }

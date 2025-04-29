@@ -6,6 +6,7 @@ public class StopFollowing : MonoBehaviour
 {
     public NightmareLights nightmareLights;
     public GameObject cube;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,11 @@ public class StopFollowing : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        nightmareLights.enterd = false;
-        Invoke("Cube", 1f);
+        if (player)
+        {
+            nightmareLights.enterd = false;
+            Invoke("Cube", 1f);
+        }
 
     }
     void Cube()

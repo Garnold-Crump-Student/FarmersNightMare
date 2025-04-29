@@ -11,6 +11,14 @@ public class SellCorn : MonoBehaviour
     public CornPickUp cornPickUp1;
     public CornPickUp cornPickUp2;
     public CornPickUp cornPickUp3;
+    public CornPickUp cornPickUp4;
+    public CornPickUp cornPickUp5;
+    public CornPickUp cornPickUp6;
+    public CornPickUp cornPickUp7;
+    public CornPickUp cornPickUp8;
+    public CornPickUp cornPickUp9;
+    public CornPickUp cornPickUp10;
+    public CornPickUp cornPickUp11;
     public GameObject corn1;
     public GameObject corn2;
     public GameObject corn3;
@@ -24,6 +32,7 @@ public class SellCorn : MonoBehaviour
     public Text moneyAmount4;
     public bool complete2;
     public GameObject sell;
+    
 
     
     
@@ -47,7 +56,18 @@ public class SellCorn : MonoBehaviour
         corn += cornPickUp1.cornAmount;
         corn += cornPickUp2.cornAmount;
         corn += cornPickUp3.cornAmount;
-        
+        corn += cornPickUp4.cornAmount;
+        corn += cornPickUp5.cornAmount;
+        corn += cornPickUp6.cornAmount;
+        corn += cornPickUp7.cornAmount;
+        corn += cornPickUp8.cornAmount;
+        corn += cornPickUp9.cornAmount;
+        corn += cornPickUp10.cornAmount;
+        corn += cornPickUp11.cornAmount;
+
+
+
+
 
         if (ontrigger == true)
         {
@@ -56,8 +76,15 @@ public class SellCorn : MonoBehaviour
             cornPickUp1.cornAmount = 0;
             cornPickUp2.cornAmount = 0;
             cornPickUp3.cornAmount = 0;
-            cornPickUp.cornAmount = 0;
-           
+            cornPickUp4.cornAmount = 0;
+            cornPickUp5.cornAmount = 0;
+           cornPickUp6.cornAmount = 0;
+            cornPickUp7.cornAmount = 0;
+            cornPickUp8.cornAmount = 0;
+            cornPickUp9.cornAmount = 0;
+             cornPickUp10.cornAmount = 0;
+            cornPickUp11.cornAmount = 0;
+
         }
         if(ontrigger == true && corn == 0)
         {

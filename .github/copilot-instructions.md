@@ -4,11 +4,11 @@
 - Active scene:
   - Name: Day1
   - Tags:
-    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground
+    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground, Hand
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: SetActive
+  - Name: Cone
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
