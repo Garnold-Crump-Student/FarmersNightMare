@@ -11,14 +11,20 @@ public class SetActive : MonoBehaviour
     public GameObject setActive3;
     public GameObject setActiveCanvas;
     public GameObject Tablet;
+    public GameObject CanvasCam;
    
     // Start is called before the first frame update
     void Start()
     {
+        string current = SceneManager.GetActiveScene().name;
         DontDestroyOnLoad(updateActive);
-     
-       
-        
+        if (current == "NightMare")
+        {
+            CanvasCam.SetActive(true);
+
+        }
+
+
     }
 
     // Update is called once per frame
@@ -34,7 +40,9 @@ public class SetActive : MonoBehaviour
             setActive.SetActive(true);
             setActive2.SetActive(true);
             setActive3.SetActive(true);
+            
         }
+       
       
     }
    

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DontDestroy : MonoBehaviour
 {
     public GameObject all;
- 
+   
   
     private string sceneToDestroyIn = "NightMare";
 
@@ -28,7 +28,8 @@ public class DontDestroy : MonoBehaviour
             all.SetActive(false);
         }
         if(current == "Day2") { all.SetActive(true); }
-        if (current != sceneToDestroyIn) { DontDestroyOnLoad(all); }
+       
+        
     }
  
 }

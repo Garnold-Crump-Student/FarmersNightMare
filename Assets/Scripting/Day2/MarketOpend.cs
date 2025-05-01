@@ -1,10 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MarketOpend : MonoBehaviour
 {
     public bool completed;
+    public Image li;
+    public Image l2;
+    public Image c1;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,16 @@ public class MarketOpend : MonoBehaviour
     }
     public void CLicked()
     {
-        completed = true;
+        string current = SceneManager.GetActiveScene().name;
+        if (current == "Day2")
+        {
+            completed = true;
+        }
+        if (completed == true)
+        {
+            li.enabled = true;
+            l2.enabled = true;
+            c1.enabled = true;
+        }
     }
 }

@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public PurhcaseButton purchaseButton;
     public GameObject player;
     public string SceneName;
+   
   
    
 
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
  
     void Start()
     {
+       
         controller = GetComponent<CharacterController>();
         DontDestroyOnLoad(player);
     }
@@ -35,7 +37,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetKeyUp(KeyCode.F)) { Invoke("LoadScene", 1); }
+       
+        if (Input.GetKeyUp(KeyCode.F)) { Invoke("LoadScene", 1); }
         slider.value = sprintTime;
         slider.maxValue = purchaseButton.fix;
         moveDirection.Normalize();

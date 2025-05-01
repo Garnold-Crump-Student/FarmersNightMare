@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BedForNightmare : MonoBehaviour
 {
-    public DontDestroy dontDestroy;
+    
     public GameObject player;
     public Text bedtext;
     public string SceneName;
