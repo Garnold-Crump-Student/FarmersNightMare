@@ -28,6 +28,7 @@ public class DontDestroy : MonoBehaviour
             all.SetActive(false);
         }
         if(current == "Day2") { all.SetActive(true); }
+       DontDestroyOnLoad(all); 
        
         
     }
