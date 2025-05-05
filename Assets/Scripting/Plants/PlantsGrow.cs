@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class PlantsGrow : MonoBehaviour
 {
-    public Image l3;
-    public Image c2;
+    public bool t;
     public WaterdPlants[] waterdPlants;
     public float num = 0;
     public WaterdPlants waterdPlant;
@@ -121,15 +120,15 @@ public class PlantsGrow : MonoBehaviour
         }
         if(num > 0)
         {
+            
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                c2.enabled = true;
-                l3.enabled = true;
+                Debug.Log("asdad");
+                t = true;
             }
             if(Input.GetKeyDown(KeyCode.Escape)) {
-                c2.enabled = false;
-                l3.enabled= false;
-            }
+                t = false;
+            } 
         }
     }
 }

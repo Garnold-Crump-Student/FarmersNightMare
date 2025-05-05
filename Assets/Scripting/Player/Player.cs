@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public PurhcaseButton purchaseButton;
     public GameObject player;
     public string SceneName;
+    public bool upgraded;
    
   
    
@@ -66,9 +67,9 @@ public class Player : MonoBehaviour
         }
         if (purchaseButton.Sold == false && purchaseButton.sold2 == false && purchaseButton.sold3 == false) { if (sprintTime >= 5) { sprintTime = 5; } 
         }
-        if(purchaseButton.Sold == true) {  if (sprintTime >= 7) { sprintTime = 7; } }
-        if(purchaseButton.sold2 == true) {if(sprintTime >= 9) {  sprintTime = 9; } }
-        if(purchaseButton.sold3 == true) { if(sprintTime >= 10) {  sprintTime = 10; } }
+        if(purchaseButton.Sold == true) {  if (sprintTime >= 7) { sprintTime = 7; upgraded = true; } }
+        if(purchaseButton.sold2 == true) {if(sprintTime >= 9) {  sprintTime = 9; upgraded = true; } }
+        if(purchaseButton.sold3 == true) { if(sprintTime >= 10) {  sprintTime = 10; upgraded = true; } }
     
         if (Input.GetKey(KeyCode.LeftShift))
         {
