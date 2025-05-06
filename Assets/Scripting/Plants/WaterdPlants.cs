@@ -17,6 +17,7 @@ public class WaterdPlants : MonoBehaviour
     public bool grown;
     public double day2a = .5;
     public double time;
+    public double time2;
  
 
     // Start is called before the first frame update
@@ -50,10 +51,23 @@ public class WaterdPlants : MonoBehaviour
                 }
             }
         }
-        
-     
-       
-            if (waterd == false) { waterdPlants.Stop(); }
+        if (currnet == "Day3")
+        {
+            time2 += day2a * Time.deltaTime;
+            if (time2 < 1)
+            {
+                if (waterd == true)
+                {
+                    Debug.Log("msadkdo");
+                    grown = true;
+                    waterd = false;
+                }
+            }
+        }
+
+
+
+        if (waterd == false) { waterdPlants.Stop(); }
             if (pickUpWateringCan.Pickup == true)
             {
                 if (Vector3.Distance(transform.position, particle.transform.position) <= 2)

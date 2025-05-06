@@ -16,7 +16,7 @@ public class Bed : MonoBehaviour
     
     void Start()
     {
-        DontDestroyOnLoad(bed);
+        
     }
 
     // Update is called once per frame

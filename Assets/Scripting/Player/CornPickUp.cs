@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CornPickUp : MonoBehaviour
@@ -26,8 +27,19 @@ public class CornPickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-        if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
+        string currnet = SceneManager.GetActiveScene().name;
+        if (currnet == "Day3")
+        {
+            if (waterdPlants.grown == true)
+            {
+                Debug.Log("asdasjdaaaaaaaaaaaaaaaaaa");
+                this.gameObject.SetActive(true);
+                waterdPlants.grown = false;
+
+            }
+        }
+
+            if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
 
         if (Vector3.Distance(transform.position, player.transform.position) >= maxDistance)
         {
@@ -55,7 +67,8 @@ public class CornPickUp : MonoBehaviour
             }
         }
         if (waterdPlants.grown== true) {
-            this.gameObject.SetActive(true); }
+            this.gameObject.SetActive(true); waterdPlants.grown = false; }
+      
+        }
 
     }
-}

@@ -5905,7 +5905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08cc8b20c021ea1469c6ee64633ed8da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7008255183766589386, guid: 59086ce748583114c96698696b5f67b6, type: 3}
+  player: {fileID: 1928993797}
   bedtext: {fileID: 1475632387}
   SceneName: Day2
   eye1: {fileID: 1535752073}
