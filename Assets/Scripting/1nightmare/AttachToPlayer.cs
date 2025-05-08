@@ -1,4 +1,7 @@
+using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AttachToPlayer : MonoBehaviour
 {
@@ -16,6 +19,20 @@ public class AttachToPlayer : MonoBehaviour
         {
             Debug.LogWarning("No object with tag 'Player' found.");
         }
+        
     }
+    private void Update()
+    {
+         string current = SceneManager.GetActiveScene().name;
+    
+    if (current != "NightMare")
+        {
+            if (GameObject.FindGameObjectWithTag("Hand"))
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
+    }
+   
   
 }

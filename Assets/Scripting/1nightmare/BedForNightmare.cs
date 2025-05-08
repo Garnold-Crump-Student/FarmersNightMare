@@ -27,10 +27,12 @@ public class BedForNightmare : MonoBehaviour
           
             eye1.enabled = false;
             eye2.enabled = false;
+            
             if (Input.GetKeyDown(KeyCode.E))
                 {
                     Invoke("LoadScene", 0.1f);
-                }
+                bedtext.enabled = false;
+            }
             
         }
         if (Vector3.Distance(transform.position, player.transform.position) >= 4)

@@ -29,6 +29,7 @@ public class Bed : MonoBehaviour
                 bedtext.enabled = true;
                 if(Input.GetKeyDown(KeyCode.E)) {
                     Invoke("LoadScene", 0.1f);
+                    bedtext.enabled=false;
                 }
             }
         }

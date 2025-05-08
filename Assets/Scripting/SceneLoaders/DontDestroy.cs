@@ -8,7 +8,7 @@ public class DontDestroy : MonoBehaviour
     public GameObject all;
    
   
-    private string sceneToDestroyIn = "NightMare";
+    
 
     // Start is called before the first frame update
     void Start()
