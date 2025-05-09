@@ -18,7 +18,8 @@ public class DoorOpen : MonoBehaviour
     public GameObject Door;
      void Start()
     {
-        DontDestroyOnLoad(Door);
+    
+    DontDestroyOnLoad(this);
 
     }
     void Update()

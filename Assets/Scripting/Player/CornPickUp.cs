@@ -38,7 +38,7 @@ public class CornPickUp : MonoBehaviour
 
             }
         }
-
+      
             if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance)
 
         if (Vector3.Distance(transform.position, player.transform.position) >= maxDistance)
@@ -68,7 +68,7 @@ public class CornPickUp : MonoBehaviour
         }
         if (waterdPlants.grown== true) {
             this.gameObject.SetActive(true); waterdPlants.grown = false; }
-      
+     
         }
 
     }

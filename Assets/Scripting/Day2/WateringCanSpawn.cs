@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PlayerSpawn : MonoBehaviour
+public class WateringCanSpawn : MonoBehaviour
 {
+    // Start is called before the first frame update
     public bool startGame = true;
     private void Update()
-    {if (startGame == true)
+    {
+        if (startGame == true)
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            GameObject player = GameObject.FindGameObjectWithTag("WcanSpawn");
             player.transform.position = this.transform.position; Invoke("setFalse", 0.5f);
         }
     }
@@ -18,4 +18,5 @@ public class PlayerSpawn : MonoBehaviour
     {
         startGame = false;
     }
+
 }

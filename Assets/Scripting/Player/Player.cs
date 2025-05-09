@@ -32,12 +32,14 @@ public class Player : MonoBehaviour
     {
        
         controller = GetComponent<CharacterController>();
-        DontDestroyOnLoad(player);
+      DontDestroyOnLoad(player);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
        
         if (Input.GetKeyUp(KeyCode.F)) { Invoke("LoadScene", 1); }
         slider.value = sprintTime;

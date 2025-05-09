@@ -15,6 +15,7 @@ public class Complete : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DontDestroyOnLoad(this);
         if(bools.enable == true && plantsGrow.t == true)
         {
             Completed = true;

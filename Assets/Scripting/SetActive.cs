@@ -12,6 +12,7 @@ public class SetActive : MonoBehaviour
     public GameObject setActiveCanvas;
     public GameObject Tablet;
     public GameObject CanvasCam;
+
    
     // Start is called before the first frame update
     void Start()

@@ -23,16 +23,9 @@ public class AttachToPlayer : MonoBehaviour
     }
     private void Update()
     {
-         string current = SceneManager.GetActiveScene().name;
-    
-    if (current != "NightMare")
-        {
-            if (GameObject.FindGameObjectWithTag("Hand"))
-            {
-                this.gameObject.SetActive(false);
-            }
+        
         }
-    }
+    
    
   
 }

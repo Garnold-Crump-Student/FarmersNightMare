@@ -15,7 +15,7 @@ public class CountDown : MonoBehaviour
     public Complete complete;
     void Start()
     {
-        
+        DontDestroyOnLoad(this);
     }
 
     // Update is called once per frame

@@ -8,7 +8,6 @@ public class BoolsImage : MonoBehaviour
     public Canvas canvas;
     public Player player;
     public Canvas canvas2;
-    public Canvas list;
     public bool enable;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +18,7 @@ public class BoolsImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DontDestroyOnLoad(this);
         if(plantsGrow.t == true)
         {
 canvas.enabled = true;

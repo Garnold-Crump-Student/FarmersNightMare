@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class DontDestroy : MonoBehaviour
 {
     public GameObject all;
+    public Renderer all2;
+    public Collider all3;
    
   
     
@@ -21,14 +23,19 @@ public class DontDestroy : MonoBehaviour
     // Update is called once per frame
 
     void Update()
-    {
+    {  DontDestroyOnLoad(all);
         string current = SceneManager.GetActiveScene().name;
         if (current == "NightMare")
         {
-            all.SetActive(false);
+            all2.enabled = false;
+            all3.enabled = false;
         }
-        if(current == "Day2") { all.SetActive(true); }
-       DontDestroyOnLoad(all); 
+        if (current != "NightMare")
+        {
+          all2.enabled=true;
+            all3.enabled=true;
+          
+        }
        
         
     }

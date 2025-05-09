@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlantsGrow : MonoBehaviour
 {
+    
     public bool t;
     public WaterdPlants[] waterdPlants;
     public float num = 0;
@@ -63,9 +64,11 @@ public class PlantsGrow : MonoBehaviour
 
     void Update()
     {
+        DontDestroyOnLoad(this);
         string currnet = SceneManager.GetActiveScene().name;
         if(currnet == "Day2")
         {
+            this.gameObject.SetActive(true);
            foreach(var plant in waterdPlants)
             {
                 if(waterdPlant.waterd == true && WaterdPlant2.waterd == true  

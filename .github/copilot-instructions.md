@@ -4,11 +4,11 @@
 - Active scene:
   - Name: Day1
   - Tags:
-    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground, Hand, Obj
+    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground, Hand, Obj, SpawnPoint, WcanSpawn
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: End
+  - Name: checks (1)
   - Tag: Untagged
-  - Layer: Default
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
