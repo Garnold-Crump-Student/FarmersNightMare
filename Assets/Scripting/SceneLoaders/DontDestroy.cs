@@ -24,6 +24,10 @@ public class DontDestroy : MonoBehaviour
 
     void Update()
     {  DontDestroyOnLoad(all);
+        if (all2 != null && all3!=null){
+            all2 = null;
+            all3 = null;
+        }
         string current = SceneManager.GetActiveScene().name;
         if (current == "NightMare")
         {
@@ -35,7 +39,9 @@ public class DontDestroy : MonoBehaviour
           all2.enabled=true;
             all3.enabled=true;
           
+          
         }
+     
        
         
     }

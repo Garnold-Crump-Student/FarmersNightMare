@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorOpen : MonoBehaviour
 {
@@ -16,14 +17,22 @@ public class DoorOpen : MonoBehaviour
     private float maxDistance = 2f;
     public GameObject player;
     public GameObject Door;
+  public GameObject w1;
+    public GameObject w2;
      void Start()
     {
-    
-    DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(w1); DontDestroyOnLoad(w2);
+
 
     }
     void Update()
     {
+      
+           
+        
+        string current = SceneManager.GetActiveScene().name;
+        
         if (Vector3.Distance(transform.position, player.transform.position) <= maxDistance) {
             if (Input.GetKeyDown(openCloseKey))
             {
@@ -48,6 +57,11 @@ public class DoorOpen : MonoBehaviour
             wall1.enabled = false; wall2.enabled = false;
 
 
+        }
+        else
+        {
+            wall2 = null;
+            wall1 = null;
         }
     }
 

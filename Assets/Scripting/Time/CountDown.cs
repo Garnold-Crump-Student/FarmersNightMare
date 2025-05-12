@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CountDown : MonoBehaviour
@@ -21,27 +22,35 @@ public class CountDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(complete.Completed == true) { start = true;
-           
-            
-        }
-        if(time <= 0)
+        string current = SceneManager.GetActiveScene().name;
+        if (current == "Day3")
         {
-         
-            countdownDisplay.enabled = false;
-            chase = true;
-            enemy.SetActive(true);
-           
+            enemy.SetActive(false);
         }
-        if(start == false) { enemy.SetActive(false); }
-        if (start == true)
+        if (current == "Day2")
         {
-            time -= Time.deltaTime;
-            int rounded = Convert.ToInt32(time);
-            countdownDisplay.text = rounded.ToString();
-        }
-        
+            if (complete.Completed == true)
+            {
+                start = true;
 
+
+            }
+            if (time <= 0)
+            {
+
+                countdownDisplay.enabled = false;
+                chase = true;
+                enemy.SetActive(true);
+
+            }
+            if (start == false) { enemy.SetActive(false); }
+            if (start == true)
+            {
+                time -= Time.deltaTime;
+                int rounded = Convert.ToInt32(time);
+                countdownDisplay.text = rounded.ToString();
+            }
+
+        }
     }
 }

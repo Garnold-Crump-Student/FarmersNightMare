@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
 public class Follow2 : MonoBehaviour
@@ -8,10 +10,13 @@ public class Follow2 : MonoBehaviour
     public float speed = 5.0f;
     public float minDist = 1f;
     public Transform target;
-  
+    public float Damage = 0f;
     public float rotationSpeed = 5f;
     public GameObject enemy;
     public CountDown countDown;
+    public GameObject player;
+    public Player playerScript;
+    public CountDown playerCountdown;
     void Start()
     {
         if (target == null)
@@ -26,6 +31,19 @@ public class Follow2 : MonoBehaviour
 
     void Update()
     {
+        string current =SceneManager.GetActiveScene().name;
+        if(current == "Day2")
+        {
+            if (playerCountdown.chase == true)
+            {
+                Damage = 1f;
+                if (Vector3.Distance(transform.position, player.transform.position) <= 2)
+                {
+                    playerScript.health -= Damage;
+                    Debug.Log("-1 health");
+                }
+            }
+        }
         if (countDown.chase == false || target == null)
             return;
 
@@ -47,4 +65,5 @@ public class Follow2 : MonoBehaviour
     {
         target = newTarget;
     }
+    
 }

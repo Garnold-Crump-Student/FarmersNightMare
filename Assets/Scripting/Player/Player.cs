@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -20,6 +21,8 @@ public class Player : MonoBehaviour
     public GameObject player;
     public string SceneName;
     public bool upgraded;
+    public float health = 1f;
+    public bool runiedFarm;
    
   
    
@@ -39,8 +42,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-       
+       string current = SceneManager.GetActiveScene().name;
+        if (current == "Day2")
+        {
+            if(health < 1)
+            {
+                runiedFarm = true;
+                SceneManager.LoadScene("Day3");
+            }
+        }
+
+
         if (Input.GetKeyUp(KeyCode.F)) { Invoke("LoadScene", 1); }
         slider.value = sprintTime;
         slider.maxValue = purchaseButton.fix;
@@ -104,5 +116,6 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene(SceneName);
     }
-
+    
+    
 }
