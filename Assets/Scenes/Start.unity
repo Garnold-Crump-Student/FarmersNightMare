@@ -15120,9 +15120,13 @@ MonoBehaviour:
   sprintSpeed: 8
   sprintTime: 5
   isSprinting: 0
-  sprintTime1: 0
   slider: {fileID: 1146443594}
   purchaseButton: {fileID: 505074982}
+  player: {fileID: 0}
+  SceneName: 
+  upgraded: 0
+  health: 1
+  runiedFarm: 0
 --- !u!114 &2015526807
 MonoBehaviour:
   m_ObjectHideFlags: 0

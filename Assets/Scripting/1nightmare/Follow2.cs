@@ -31,9 +31,12 @@ public class Follow2 : MonoBehaviour
 
     void Update()
     {
+        DontDestroyOnLoad(this);
         string current =SceneManager.GetActiveScene().name;
+        if(current != "Day2") { this.gameObject.SetActive(false); }
         if(current == "Day2")
         {
+            this.gameObject.SetActive(true);
             if (playerCountdown.chase == true)
             {
                 Damage = 1f;
