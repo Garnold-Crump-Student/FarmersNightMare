@@ -4882,9 +4882,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 87509420}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &87509420 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -7510,9 +7512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 136328768}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &136328768 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -10502,9 +10506,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 203769749}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &203769749 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -15315,6 +15321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278079423}
   - component: {fileID: 278079424}
+  - component: {fileID: 278079425}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -15386,6 +15393,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c87c878346472ff449e6e641a12ff7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &278079425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278079422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4016523c72df842bbd231e002ed581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireStoped:
+  - {fileID: 1906555445}
+  - {fileID: 716511197}
+  - {fileID: 1294382852}
+  - {fileID: 1426496253}
+  - {fileID: 1706488683}
+  - {fileID: 679759020}
+  - {fileID: 2132441177}
+  - {fileID: 1494865275}
+  - {fileID: 1951917134}
+  - {fileID: 1283858927}
+  - {fileID: 1688327314}
+  - {fileID: 1014437685}
+  - {fileID: 2021809549}
+  - {fileID: 1978747624}
+  - {fileID: 1843047236}
+  - {fileID: 1377807065}
+  - {fileID: 541092271}
+  - {fileID: 2069035665}
+  - {fileID: 87509417}
+  - {fileID: 1182989113}
+  - {fileID: 1926913260}
+  - {fileID: 203769746}
+  - {fileID: 1922444302}
+  - {fileID: 1514436576}
+  - {fileID: 1103420654}
+  - {fileID: 1252380392}
+  - {fileID: 1943404801}
+  - {fileID: 1999525743}
+  - {fileID: 1687164012}
+  - {fileID: 1869892644}
+  - {fileID: 1944455853}
+  - {fileID: 1965989285}
+  - {fileID: 1300590520}
+  - {fileID: 865791337}
+  - {fileID: 1439208435}
+  - {fileID: 1073230866}
+  - {fileID: 0}
+  fireOut1: {fileID: 1906555445}
+  fireOut2: {fileID: 716511197}
+  fireOut3: {fileID: 1294382852}
+  fireOut4: {fileID: 1426496253}
+  fireOut5: {fileID: 1706488683}
+  fireOut6: {fileID: 679759020}
+  fireOut7: {fileID: 2132441177}
+  fireOut8: {fileID: 1494865275}
+  fireOut9: {fileID: 1951917134}
+  fireOut10: {fileID: 1283858927}
+  fireOut11: {fileID: 1688327314}
+  fireOut12: {fileID: 1014437685}
+  fireOut13: {fileID: 2021809549}
+  fireOut14: {fileID: 1978747624}
+  fireOut15: {fileID: 1843047236}
+  fireOut16: {fileID: 1377807065}
+  fireOut17: {fileID: 541092271}
+  fireOut18: {fileID: 2069035665}
+  fireOut19: {fileID: 87509417}
+  fireOut20: {fileID: 1182989113}
+  fireOut21: {fileID: 1926913260}
+  fireOut22: {fileID: 203769746}
+  fireOut23: {fileID: 1922444302}
+  fireOut24: {fileID: 1514436576}
+  fireOut25: {fileID: 1103420654}
+  fireOut26: {fileID: 1252380392}
+  fireOut27: {fileID: 1943404801}
+  fireOut28: {fileID: 136328765}
+  fireOut29: {fileID: 1999525743}
+  fireOut30: {fileID: 1687164012}
+  fireOut31: {fileID: 1869892644}
+  fireOut32: {fileID: 1944455853}
+  fireOut33: {fileID: 1965989285}
+  fireOut34: {fileID: 1300590520}
+  fireOut35: {fileID: 865791337}
+  fireOut36: {fileID: 1439208435}
+  fireOut37: {fileID: 1073230866}
+  num: 0
 --- !u!1001 &278782617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27767,9 +27862,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 541092274}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &541092274 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -32972,9 +33069,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 207194476}
   fire: {fileID: 310181761}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!114 &657139699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34159,9 +34258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 679759023}
   fires: {fileID: 679759019}
+  stoped: 0
 --- !u!198 &679759023 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -35841,9 +35942,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 716511200}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &716511200 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -43892,9 +43995,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 865791340}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &865791340 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -56618,9 +56723,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1014437688}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1014437688 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -59794,9 +59901,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1073230869}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1073230869 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -61125,9 +61234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1103420657}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1103420657 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -65369,9 +65480,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1182989116}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1182989116 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -68717,9 +68830,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1252380395}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1252380395 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -70684,9 +70799,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1283858930}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1283858930 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -71496,9 +71613,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1294382855}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1294382855 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -71906,9 +72025,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1300590523}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1300590523 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -75430,9 +75551,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1377807068}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1377807068 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -78568,9 +78691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1426496256}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1426496256 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -79228,9 +79353,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1439208438}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1439208438 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -82587,9 +82714,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1494865278}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1494865278 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -83311,9 +83440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1514436579}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1514436579 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -91185,9 +91316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1687164015}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1687164015 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -91283,9 +91416,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1688327317}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1688327317 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -97095,9 +97230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1706488686}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1706488686 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -104226,9 +104363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1843047239}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1843047239 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -105500,9 +105639,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1869892647}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1869892647 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -107188,9 +107329,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1906555448}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1906555448 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -107920,9 +108063,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1922444305}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1922444305 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -108132,9 +108277,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1926913263}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1926913263 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -109005,9 +109152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1943404804}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1943404804 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -109125,9 +109274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1944455856}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1944455856 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -109588,9 +109739,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1951917137}
   fires: {fileID: 1565321690}
+  stoped: 0
 --- !u!198 &1951917137 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -110307,9 +110460,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1965989288}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1965989288 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -110777,9 +110932,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1978747627}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1978747627 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -112070,9 +112227,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 1999525746}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &1999525746 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -113539,9 +113698,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 2021809552}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &2021809552 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -115462,9 +115623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 2069035668}
   fires: {fileID: 278079422}
+  stoped: 0
 --- !u!198 &2069035668 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -118672,9 +118835,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f02f46eae96d44b0bd29acc88cab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sum: 0
   particle: {fileID: 1697664504}
   fire: {fileID: 2132441180}
   fires: {fileID: 2132441176}
+  stoped: 0
 --- !u!198 &2132441180 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1255053967005034565, guid: 7e8d30e7be9957c43862563919b4cbcf, type: 3}
@@ -120412,6 +120577,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3955729961821000324, guid: 59086ce748583114c96698696b5f67b6, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4744079041696666757, guid: 59086ce748583114c96698696b5f67b6, type: 3}
       propertyPath: field of view
       value: 60

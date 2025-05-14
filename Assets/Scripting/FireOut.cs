@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class FireOut : MonoBehaviour
 {
-
+    public float sum;
     public ParticleSystem particle;
     public ParticleSystem fire;
     public GameObject fires;
+    public bool stoped;
     
     void Start()
     {
@@ -34,6 +35,17 @@ public class FireOut : MonoBehaviour
                 if (Input.GetMouseButton(0))
                 {
                     fire.Stop();
+                  stoped = true;
+              if(fire.isStopped == true){      if (stoped == true)
+                        {
+                            sum += 1;
+                            stoped = false;
+                            if (sum > 1)
+                            {
+                                sum = 1;
+                            }
+                        }
+                    } 
                 }
             }
         }
