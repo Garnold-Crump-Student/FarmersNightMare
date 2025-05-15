@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FireSum : MonoBehaviour
 {
@@ -44,6 +45,14 @@ public FireOut fireOut19;
     public FireOut fireOut36;
         public FireOut fireOut37;
     public float num = 0;
+    public OnLeaveStartTime onLeaveStartTime;
+    public GameObject ufo;
+    public GameObject enemy;
+    public Vector3 enemyUfo;
+    public Vector3 playersArea;
+ 
+    public GameObject UFoParent;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -54,50 +63,78 @@ public FireOut fireOut19;
     void Update()
     {
    
-            num += fireOut1.sum; fireOut1.sum = 0;
-            num += fireOut2.sum; fireOut2.sum = 0;
-            num += fireOut3.sum; fireOut3.sum = 0;
-            num += fireOut4.sum; fireOut4.sum = 0;
-            num += fireOut5.sum; fireOut5.sum = 0;
-            num += fireOut6.sum; fireOut6.sum = 0;
-            num += fireOut7.sum; fireOut7.sum = 0;
-            num += fireOut8.sum; fireOut8.sum = 0;
-            num += fireOut9.sum; fireOut9.sum = 0;
-            num += fireOut10.sum; fireOut10.sum = 0;
-            num += fireOut11.sum; fireOut11.sum = 0;
-            num += fireOut12.sum; fireOut12.sum = 0;
-            num += fireOut13.sum; fireOut13.sum = 0;
-            num += fireOut14.sum; fireOut14.sum = 0;
-            num += fireOut15.sum; fireOut15.sum = 0;
-            num += fireOut16.sum; fireOut16.sum = 0;
-            num += fireOut17.sum; fireOut17.sum = 0;
-            num += fireOut18.sum; fireOut18.sum = 0;
-            num += fireOut19.sum; fireOut19.sum = 0;
-            num += fireOut20.sum; fireOut20.sum = 0;
-            num += fireOut21.sum; fireOut21.sum = 0;
-            num += fireOut22.sum; fireOut22.sum = 0;
-            num += fireOut23.sum; fireOut23.sum = 0;
-            num += fireOut24.sum; fireOut24.sum = 0;
-            num += fireOut25.sum; fireOut25.sum = 0;
-            num += fireOut26.sum; fireOut26.sum = 0;
-            num += fireOut27.sum; fireOut27.sum = 0;
-            num += fireOut28.sum; fireOut28.sum = 0;
-            num += fireOut29.sum; fireOut29.sum = 0;
-            num += fireOut30.sum; fireOut30.sum = 0;
-            num += fireOut31.sum; fireOut31.sum = 0;
-            num += fireOut32.sum; fireOut32.sum = 0;
-            num += fireOut33.sum; fireOut33.sum = 0;
-            num += fireOut34.sum; fireOut34.sum = 0;
-            num += fireOut35.sum; fireOut35.sum = 0;
-            num += fireOut36.sum; fireOut36.sum = 0;
-            num += fireOut37.sum; fireOut37.sum = 0;
+          if(   fireOut1.stoped == true && 
+             fireOut2.stoped == true &&
+             fireOut3.stoped == true && 
+             fireOut4.stoped == true &&
+             fireOut5.stoped == true && 
+             fireOut6.stoped == true &&
+             fireOut7.stoped == true && 
+             fireOut8.stoped == true &&
+             fireOut9.stoped == true && 
+             fireOut10.stoped == true && 
+             fireOut11.stoped == true && 
+             fireOut12.stoped == true && 
+             fireOut13.stoped == true && 
+             fireOut14.stoped == true && 
+             fireOut15.stoped == true && 
+             fireOut16.stoped == true && 
+             fireOut17.stoped == true && 
+             fireOut18.stoped == true && 
+             fireOut19.stoped == true && 
+             fireOut20.stoped == true && 
+             fireOut21.stoped == true && 
+             fireOut22.stoped == true && 
+             fireOut23.stoped == true && 
+             fireOut24.stoped == true && 
+             fireOut25.stoped == true && 
+             fireOut26.stoped == true && 
+             fireOut27.stoped == true && 
+             fireOut28.stoped == true && 
+             fireOut29.stoped == true && 
+             fireOut30.stoped == true && 
+             fireOut31.stoped == true && 
+             fireOut32.stoped == true && 
+             fireOut33.stoped == true && 
+             fireOut34.stoped == true && 
+        fireOut35.stoped == true &&
+             fireOut36.stoped == true && 
+             fireOut37.stoped == true ) 
+        {
+
+            if(onLeaveStartTime.time > 0)
+
+            {
+                Vector3 diretction = enemy.transform.position;
+ufo.SetActive(true);
+                enemy.SetActive(true);
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.transform.position = playersArea;
+                if (enemy.transform.position.y < 18)
+                {
+                    enemy.transform.Translate(Vector3.up * 5 * Time.deltaTime);
+                    Invoke("UfoTravel", 3.5f);
+
+                }
+               
+
+            }
+        
+        
+        }
+        else {if (onLeaveStartTime.time <= 0)
+            {
+                SceneManager.LoadScene("Lost");
+            }
+        }
           
 
         
-        if(num == 37)
-        {
-            Debug.Log("Fire stopped");
-        }
+     
+    }
+  public  void UfoTravel()
+    {
+        UFoParent.transform.Translate(Vector3.back * 10 * Time.deltaTime);
     }
 
 }

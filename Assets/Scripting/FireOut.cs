@@ -10,6 +10,7 @@ public class FireOut : MonoBehaviour
     public ParticleSystem fire;
     public GameObject fires;
     public bool stoped;
+    public bool fireout;
     
     void Start()
     {
@@ -34,17 +35,18 @@ public class FireOut : MonoBehaviour
             {
                 if (Input.GetMouseButton(0))
                 {
+                    fireout = true;
                     fire.Stop();
                   stoped = true;
-              if(fire.isStopped == true){      if (stoped == true)
+                if (fireout == true)
                         {
                             sum += 1;
-                            stoped = false;
+                            fireout = false;
                             if (sum > 1)
                             {
                                 sum = 1;
                             }
-                        }
+                        
                     } 
                 }
             }
