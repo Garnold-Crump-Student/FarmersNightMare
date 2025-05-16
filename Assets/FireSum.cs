@@ -114,6 +114,7 @@ ufo.SetActive(true);
                 {
                     enemy.transform.Translate(Vector3.up * 5 * Time.deltaTime);
                     Invoke("UfoTravel", 3.5f);
+                    Invoke("WinningScene", 4.5f);
 
                 }
                
@@ -135,6 +136,10 @@ ufo.SetActive(true);
   public  void UfoTravel()
     {
         UFoParent.transform.Translate(Vector3.back * 10 * Time.deltaTime);
+    }
+    public void WinningScene()
+    {
+        SceneManager.LoadScene("Won");
     }
 
 }

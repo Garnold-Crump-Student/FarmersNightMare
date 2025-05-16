@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
-using UnityEditor.SearchService;
+
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -23,6 +21,7 @@ public class Player : MonoBehaviour
     public bool upgraded;
     public float health = 1f;
     public bool runiedFarm;
+    public Vector3 mover;
    
   
    
@@ -33,9 +32,9 @@ public class Player : MonoBehaviour
  
     void Start()
     {
-       
+       string current = SceneManager.GetActiveScene().name;
         controller = GetComponent<CharacterController>();
-      DontDestroyOnLoad(player);
+        if (current == "Title") { DontDestroyOnLoad(player); }
         
     }
 
@@ -53,7 +52,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Input.GetKeyUp(KeyCode.F)) { Invoke("LoadScene", 1); }
+   
         slider.value = sprintTime;
         slider.maxValue = purchaseButton.fix;
         moveDirection.Normalize();
@@ -91,6 +90,7 @@ public class Player : MonoBehaviour
             isSprinting = true;
 
         }
+      
        
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
              moveSpeed =  sprintSpeed;
@@ -112,10 +112,7 @@ public class Player : MonoBehaviour
     {
         sprintTime += minSprint * Time.deltaTime;
     }
-    void LoadScene()
-    {
-        SceneManager.LoadScene(SceneName);
-    }
+    
     
     
 }

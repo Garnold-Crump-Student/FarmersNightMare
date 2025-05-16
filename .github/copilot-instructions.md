@@ -2,13 +2,13 @@
 - Project name: FarmersNightMare
 - Unity version: Unity 2023.1.7f1
 - Active scene:
-  - Name: Day1
+  - Name: Lost
   - Tags:
     - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Ground, Hand, Obj, SpawnPoint, WcanSpawn
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: VFX_Fire_Floor_01_Smoke (15)
+  - Name: Canvas
   - Tag: Untagged
-  - Layer: Default
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
