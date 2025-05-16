@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 59c362ab5cf7e1d4896a275d588cc58a
   - enabled: 1
+    path: Assets/Scenes/Won.unity
+    guid: 1f448432bd7f3214c9d774b3f5b207e0
+  - enabled: 1
+    path: Assets/Scenes/Lost.unity
+    guid: 416b9090f87fda5439272184288354e6
+  - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -16,27 +22,12 @@ EditorBuildSettings:
     guid: 904b8103f53ddae448215ee56911f5cf
   - enabled: 1
     path: Assets/Scenes/Day2.unity
-    guid: f0b5934966301a34c91797c6c338eff5
+    guid: 5a2ec53d86917ce4186b84d6aae972a3
   - enabled: 1
     path: Assets/Scenes/NightMare.unity
     guid: 911fb7d3d4885a1459313be01011cc27
   - enabled: 1
     path: Assets/Scenes/Day3.unity
     guid: 6d4871269a34e644091946b528c17cf0
-  - enabled: 1
-    path: Assets/Scenes/NightMare1.unity
-    guid: 4b955b2aed6f6684aa1ddf4a341cdae7
-  - enabled: 1
-    path: Assets/Scenes/NightMare2.unity
-    guid: 6232cb04459c5c548905d1de80dc4d18
-  - enabled: 1
-    path: Assets/Scenes/NightMare3.unity
-    guid: cde36d181c8d5904ea609ae915ebe012
-  - enabled: 1
-    path: Assets/Scenes/NightMare4.unity
-    guid: f1e3d0d2a74b38b4aa372dcb8893d6cb
-  - enabled: 1
-    path: Assets/Scenes/NightMare5.unity
-    guid: e6d1232a47f6c9847ba86076fda79d65
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
